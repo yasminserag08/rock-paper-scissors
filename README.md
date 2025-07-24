@@ -3,13 +3,12 @@ A simple interactive Rock Paper Scissors game built using **HTML**, **CSS**, and
 
 ---
 
-## 🎮 Demo
+## Demo
 [Live Demo](https://yasminserag08.github.io/rock-paper-scissors/) 
 
 ---
 
 ## Features
-
 - Play against a computer opponent
 - Real-time score tracking
 - Responsive and clean UI
@@ -18,7 +17,6 @@ A simple interactive Rock Paper Scissors game built using **HTML**, **CSS**, and
 ---
 
 ## Tech Stack
-
 - HTML
 - CSS
 - JavaScript
