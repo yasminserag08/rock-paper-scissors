@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Rock Paper Scissors
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1 class="game-title">
+      Rock Paper Scissors
+    </h1>
+
+    <!-- Rock paper scissors buttons -->
+    <div class="game-container">
+      <div class="game-buttons-container">
+        <button
+          onclick="playGame('rock')"
+        >
+          <img src="./assets/rock-emoji.png" class="button-icon">
+        </button>
+
+        <button
+          onclick="playGame('paper')"
+        >
+          <img src="./assets/paper-emoji.png" class="button-icon">
+        </button>
+
+        <button
+          onclick="playGame('scissors')"
+        >
+          <img src="./assets/scissors-emoji.png" class="button-icon">
+        </button>
+      </div>
+
+
+      <!-- JavaScript shows game result here -->
+      <div class="game-result-container">
+        <h2 id="game-result"></h2>
+
+        <div class="picks-container">
+          <div class="playerPick-container">
+            <p id="playerPick"></p>
+            <img id="playerPick-image">
+          </div>
+          <div class="computerPick-container">
+            <p id="computerPick"></p>
+            <img id="computerPick-image">
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript shows scores here -->
+      <div class="scores">
+        <p id="wins"></p>
+        <p id="losses"></p>
+        <p id="ties"></p>
+      </div>
+
+      <button class="reset"
+        onclick="resetScore()">
+        Reset score
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>

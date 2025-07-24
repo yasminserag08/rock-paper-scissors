@@ -1,0 +1,154 @@
+body {
+  font-family: Montserrat;
+}
+
+
+.game-title {
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+}
+
+.game-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  padding-bottom: 10px;
+}
+
+button {
+  background-color: white;
+  border: 3px solid rgb(37, 160, 0);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  transition: background-color 1ms;
+  transition: opacity 1ms;
+}
+
+button:hover {
+  background-color: rgb(37, 160, 0);
+}
+
+button:active {
+  opacity: 0.7;
+}
+
+.button-icon {
+  height: 60px;
+  width: 60px;
+}
+
+.game-result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+
+#game-result {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.picks-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 5px;
+  padding-bottom: 15px;
+}
+
+.playerPick-container,
+.computerPick-container 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.computerPick-container 
+{
+  margin-left: 10px;
+}
+
+.playerPick-container 
+{
+  margin-right: 10px;
+}
+
+#playerPick
+{
+  text-align: center;
+}
+
+#computerPick 
+{
+  text-align: center;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0px;
+}
+
+#wins {
+  background-color: rgba(0, 255, 0, 0.597);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#losses {
+  background-color: rgba(255, 0, 0, 0.597);
+}
+
+#ties {
+  background-color: rgba(255, 225, 0, 0.597);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#wins, #losses, #ties {
+  font-weight: 500;
+  font-size: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.reset {
+  margin-top: 50px;
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgb(0, 21, 255);
+  color: rgb(0, 21, 255);
+  font-family: Montserrat;
+  font-weight: 500;
+  width: 120px;
+  transition: color 1ms;
+  transition: background-color 1ms;
+}
+
+.reset:hover {
+  color: white;
+  background-color: rgb(0, 21, 255);
+}
