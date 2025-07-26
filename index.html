@@ -64,7 +64,10 @@
       </div>
 
       <button class="reset"
-        onclick="resetScore()">
+        onclick="
+          resetScore();
+          localStorage.removeItem('score');
+          displayScore();">
         Reset score
       </button>
     </div>

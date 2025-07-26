@@ -1,7 +1,11 @@
 const options = ['rock', 'paper', 'scissors'];
-let wins = 0;
-let losses = 0;
-let ties = 0;
+
+let score = JSON.parse(localStorage.getItem('score')) || {
+  wins: 0,
+  losses: 0,
+  ties:0
+};
+
 window.onload = displayScore();
 
 // Computer player
@@ -13,19 +17,18 @@ function computerPick() {
   return pick;
 }
 
-// Scores displayer 
+// Score displayer 
 function displayScore() {
-  document.getElementById("wins").innerHTML = `Wins: ${wins}`;
-  document.getElementById("losses").innerHTML = `Losses: ${losses}`;
-  document.getElementById("ties").innerHTML = `Ties: ${ties}`;
+  document.getElementById("wins").innerHTML = `Wins: ${score.wins}`;
+  document.getElementById("losses").innerHTML = `Losses: ${score.losses}`;
+  document.getElementById("ties").innerHTML = `Ties: ${score.ties}`;
 }
 
 // Reset score
 function resetScore() {
-  wins = 0;
-  losses = 0;
-  ties = 0;
-  displayScore();
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
 }
 
 // Main function
@@ -34,29 +37,29 @@ function playGame(playerPick) {
 
   let computerMove = computerPick();
   if (playerPick === computerMove) {
-    ties++;
+    score.ties += 1;
     tie = true;
   }
 
   // Win cases
   else if (playerPick === 'rock' && computerMove === 'scissors') {
-    wins++;
+    score.wins += 1;
     win = true;
   }
 
   else if (playerPick === 'scissors' && computerMove === 'paper') {
-    wins++;
+    score.wins += 1;
     win = true;
   }
 
   else if (playerPick === 'paper' && computerMove === 'rock') {
-    wins++; 
+    score.wins += 1; 
     win = true;
   }
 
   // If not a tie or a win case, computer wins
   else {
-    losses++;
+    score.losses += 1;
     loss = true;
   }
 
@@ -72,6 +75,8 @@ function playGame(playerPick) {
   else {
     document.getElementById("game-result").innerHTML = 'Tie.'
   }
+
+  localStorage.setItem('score', JSON.stringify(score));
 
   document.getElementById("playerPick").innerHTML = 'You';
   document.getElementById("playerPick-image").src = `./assets/${playerPick}-emoji.png`;
