@@ -19,9 +19,9 @@ function computerPick() {
 
 // Score displayer 
 function displayScore() {
-  document.getElementById("wins").innerHTML = `Wins: ${score.wins}`;
-  document.getElementById("losses").innerHTML = `Losses: ${score.losses}`;
-  document.getElementById("ties").innerHTML = `Ties: ${score.ties}`;
+  document.querySelector('#wins').innerHTML = `Wins: ${score.wins}`;
+  document.querySelector('#losses').innerHTML = `Losses: ${score.losses}`;
+  document.querySelector('#ties').innerHTML = `Ties: ${score.ties}`;
 }
 
 // Reset score
@@ -65,25 +65,25 @@ function playGame(playerPick) {
 
   // Show result 
   if (win) {
-    document.getElementById("game-result").innerHTML = 'You win.';
+    document.querySelector('#game-result').innerHTML = 'You win.';
   }
 
   else if (loss) {
-    document.getElementById("game-result").innerHTML = 'You lose.';
+    document.querySelector('#game-result').innerHTML = 'You lose.';
   }
 
   else {
-    document.getElementById("game-result").innerHTML = 'Tie.'
+    document.querySelector('#game-result').innerHTML = 'Tie.'
   }
 
   localStorage.setItem('score', JSON.stringify(score));
 
-  document.getElementById("playerPick").innerHTML = 'You';
-  document.getElementById("playerPick-image").src = `./assets/${playerPick}-emoji.png`;
-  document.getElementById("playerPick-image").style = 'height: 50px; width: 50px;'
-  document.getElementById("computerPick").innerHTML = 'Computer';
-  document.getElementById("computerPick-image").src= `./assets/${computerMove}-emoji.png`;
-  document.getElementById("computerPick-image").style = 'height: 50px; width: 50px;'
+  document.querySelector('#playerPick').innerHTML = 'You';
+  document.querySelector('#playerPick-image').src = `./assets/${playerPick}-emoji.png`;
+  document.querySelector('#playerPick-image').style = 'height: 50px; width: 50px;'
+  document.querySelector('#computerPick').innerHTML = 'Computer';
+  document.querySelector('#computerPick-image').src= `./assets/${computerMove}-emoji.png`;
+  document.querySelector('#computerPick-image').style = 'height: 50px; width: 50px;'
 
   // Update score 
   displayScore();
